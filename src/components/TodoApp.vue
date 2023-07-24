@@ -30,7 +30,7 @@ export default {
     mounted() {
     if (localStorage.getItem('todo')) {
       try {
-        var todoTemp = JSON.parse(localStorage.getItem('todo'));
+        let todoTemp = JSON.parse(localStorage.getItem('todo'));
         this.todoList = todoTemp;
       } catch(e) {
         localStorage.removeItem('todo');
