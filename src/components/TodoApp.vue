@@ -30,13 +30,13 @@ export default {
     mounted() {
     if (localStorage.getItem('todo')) {
       try {
-        let todoTemp = JSON.parse(localStorage.getItem('todo'));
+        let todoTemp = JSON.parse(localStorage.getItem('todo')) ?? [];
         this.todoList = todoTemp;
       } catch(e) {
         localStorage.removeItem('todo');
       }
     } else {
-        this.todoList = this.defaultTodo
+        this.todoList = []
     }
   },
     methods: {
